@@ -27,7 +27,10 @@ let getProducts = function () {
         $.ajax({
             url: "products.json"
         }).done(function(product){
-            console.log(product);
+            $.each(product.products, (key, value) => {
+                console.log(value)
+            })
+
             resolve()
         }).error(reject())
     })
