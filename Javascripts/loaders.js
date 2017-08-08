@@ -4,9 +4,14 @@ let getCategories = function () {
         $.ajax({
             url: "categories.json"
         }).done(function (cats) {
-            console.log(cats);
+            $.each(cats.categories, (index, item) => {
+                console.log(item);
+                parseCatsId(item);
+                parseCatsName(item)
+            });
+
            resolve()
-        }).error(reject())
+        }).error(reject("Categories didn't load"))
     })
 };
 
@@ -15,9 +20,17 @@ let getTypes = function () {
         $.ajax({
             url: "types.json"
         }).done(function(type){
-            console.log(type);
+            // console.log(type.types);
+            //get id and send it to
+            $.each(type.types, (index, item) => {
+                // console.log(item.category)
+                // console.log(item.id)
+                parseTypesCategory(item);
+                parseTypesId(item);
+                parseTypesName(item)
+            });
             resolve()
-        }).error(reject())
+        }).error(reject("Types didn't load"))
     })
 
 };
@@ -27,12 +40,16 @@ let getProducts = function () {
         $.ajax({
             url: "products.json"
         }).done(function(product){
-            $.each(product.products, (key, value) => {
-                console.log(value)
-            })
-
+            // console.log(product)
+            $.each(product.products, (index, item) => {
+                // console.log("Index", index)
+                // console.log("Item", item)
+                // console.log(item[Object.keys(item)].name)
+                parseProducts(item[Object.keys(item)]);
+                parseTypesOfProducts(item[Object.keys(item)])
+                });
             resolve()
-        }).error(reject())
+        }).error(reject("Products didn't load"))
     })
 
 };

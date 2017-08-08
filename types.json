@@ -3,73 +3,73 @@
     {
       "id": 0,
       "category": 0,
-      "name": "personal",
+      "name": "Fireworks - personal",
       "description": "Fireworks intended for recreational use during holiday celebrations"
     },
     {
       "id": 1,
       "category": 0,
-      "name": "business",
+      "name": "Fireworks - business",
       "description": "Fireworks intended for business use during holiday celebrations"
     },
     {
       "id": 2,
       "category": 0,
-      "name": "family",
+      "name": "Fireworks- family",
       "description": "Fireworks intended for family use during holiday celebrations"
     },
     {
       "id": 3,
       "category": 1,
-      "name": "personal",
+      "name": "Demolition - personal",
       "description": "Demolition intended for recreational use during holiday celebrations"
     },
     {
       "id": 4,
       "category": 1,
-      "name": "business",
+      "name": "Demolition - business",
       "description": "Demolition intended for business use during holiday celebrations"
     },
     {
       "id": 5,
       "category": 1,
-      "name": "family",
+      "name": "Demolition - family",
       "description": "Demolition intended for family use during holiday celebrations"
     },
     {
       "id": 6,
       "category": 2,
-      "name": "personal",
+      "name": "Fishing - personal",
       "description": "Fishing intended for recreational use during holiday celebrations"
     },
     {
       "id": 7,
       "category": 2,
-      "name": "business",
+      "name": "Fishing - business",
       "description": "Fishing intended for business use during holiday celebrations"
     },
     {
       "id": 8,
       "category": 2,
-      "name": "family",
+      "name": "Fishing - family",
       "description": "Fishing intended for family use during holiday celebrations"
     },
     {
       "id": 9,
       "category": 3,
-      "name": "personal",
+      "name": "Bank Heists - personal",
       "description": "Bank Heists intended for recreational use during holiday celebrations"
     },
     {
       "id": 10,
       "category": 3,
-      "name": "business",
+      "name": "Bank Heists - business",
       "description": "Bank Heists intended for business use during holiday celebrations"
     },
     {
       "id": 11,
       "category": 3,
-      "name": "family",
+      "name": "Bank Heists - family",
       "description": "Bank Heists intended for family use during holiday celebrations"
     }
   ]
