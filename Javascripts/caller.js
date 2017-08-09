@@ -1,17 +1,20 @@
 getCategories()
     .then((resolve) => {
-    console.log(resolve.categories[0].id)
-
-    return getTypes(resolve)
+        let categories = resolve.categories
+        console.log(categories)
+        return getTypes(resolve)
     },
         console.error
     )
     .then((resolve) => {
-    console.log('types?', resolve)
+        let types = resolve.types
+        console.log('types?', types)
+
         return getProducts(resolve)
     },
         console.error
     )
     .then((resolve) => {
-    console.log('products', resolve)
+        let products = resolve.products
+        console.log('products', products)
     })
