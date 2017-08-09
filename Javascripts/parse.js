@@ -1,28 +1,28 @@
-let parseProducts = (data) => {
-    return data.name
-}
-
-let parseTypesOfProducts = (data) => {
-    return data.type
-}
-
-let parseTypesId = (data) => {
-    return data.id
-}
-
-let parseTypesName = (data) => {
-    return data.name
-}
-
-let parseTypesCategory = (data) => {
-    return data.category
-}
-
-let parseCatsId = (data) => {
-    return data.id
-}
-
-let parseCatsName = (data) => {
-    return data.name
-}
-
+// {
+//     var AcmeEXP = {};
+//
+//
+//     AcmeEXP.categories  = (meowData) => {
+//         console.log(meowData)
+//         $.each(meowData, (index, item) => {
+//             $("#categories").append(`<a class="dropdown-item" id="${item.id}" value="${item.name}">${item.name}</a>`)
+//
+//
+//
+//         })
+//     }
+//
+//     AcmeEXP.pickaType = (typeData) => {
+//         let types = typeData.types
+//         let optionOfType = $("#categories").children('a:selected').attr('id')
+//
+//         $.each(types, (index, item) => {
+//             // if (Number(optionOfType) === )
+//         })
+//     }
+//
+//     AcmeEXP.pickaProduct = (productData) => {
+//         let products = productData.product
+//         let productList = $().children('a:selected').attr()
+//     }
+// }

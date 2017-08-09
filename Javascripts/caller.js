@@ -1,15 +1,17 @@
-// $(function () {
+getCategories()
+    .then((resolve) => {
+    console.log(resolve.categories[0].id)
 
-    // $("#Fireworks").change(loadFireworks)
-    // $("#Demolition").change(loadDemolition)
-    // $("#Fishing").change(loadFishing)
-    // $("#Bank-Heists").change(loadBankHeists)
-// })
-
-
-
-getCategories().then(
-    getTypes(), console.error
-    ).then(
-        getProducts(), console.error
-)
+    return getTypes(resolve)
+    },
+        console.error
+    )
+    .then((resolve) => {
+    console.log('types?', resolve)
+        return getProducts(resolve)
+    },
+        console.error
+    )
+    .then((resolve) => {
+    console.log('products', resolve)
+    })
