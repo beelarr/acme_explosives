@@ -1,4 +1,6 @@
-let getCategories = function () {
+let getCategories = function (e) {
+
+
     return new Promise((resolve, reject) => {
         $.ajax({
             url: "./json/categories.json"
@@ -8,25 +10,63 @@ let getCategories = function () {
             })
 };
 
-let getTypes = function () {
+let typesArray = [];
+
+
+let getTypes = function (e) {
     return new Promise((resolve, reject) => {
         $.ajax({
             url: "./json/types.json",
             // data: dataFromCats
         }).done(function(typeData){
-            resolve(typeData)
+            for (let type in typeData){
+                var types = typeData[type]
+            }
+            types.forEach((type) => {
+                typesArray.push(type)
+            });
+            resolve()
             }).fail((error) => reject(error))
     })
 
 };
 
-let getProducts = function () {
+let productsArray = [];
+
+let getProducts = function (e) {
     return new Promise((resolve, reject) => {
         $.ajax({
             url: "./json/products.json",
-            // data: resultFromTypes
         }).done(function(productData){
-            resolve(productData)
+            for (let product in productData) {
+                var products = productData[product]
+                products.forEach((product) => {
+                    productsArray.push(product)
+                });
+
+                let productsId = e.target.id
+                let counter = 0;
+                let productNames = ""
+                gallery.innerHTML = ""
+                productsArray.forEach((products) => {
+                    if (products.id == productsID) {
+                        productNames +=
+                            `<div class="col-3 card">
+                                <h4>${products.name}</h4>
+                                <img src="${product.image}" alt="product image">
+                                <p>${products.description}</p>
+                            </div>`;
+                        counter++;
+
+                        if (counter % 3 === 0) {
+                            var rowCounter = 1;
+                            gallery.innerHTML += `<section class="row">${productNames}</section>`:
+                        }
+                    }
+                })
+
+            }
+            resolve()
         }).fail((error) => reject(error))
     })
 };
